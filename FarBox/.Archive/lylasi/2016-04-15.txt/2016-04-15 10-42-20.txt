@@ -1,0 +1,17 @@
+---
+date:
+status: draft
+title:
+---
+
+Farbox Editor is a dedicated tool for writing.
+
+Drag images or other attachments to insert.
+Markdown and plain text are both supported here.
+
+The folder shaped button from menu toggles FileManager, where you can manage sites/categories/posts.
+You can also manage them in your local FarBox directory.
+
+Editor is always simple, but there are also many features that are worth exploring, try `Ctrl+8` to find the first one. ：）
+
+Enjoy!
