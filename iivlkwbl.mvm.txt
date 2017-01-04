@@ -1,0 +1,16 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	deleted:    FarBox/.Archive/lylasi/2016-04-15.md/2016-04-15 10-44-41.md
+#	deleted:    FarBox/.Archive/lylasi/2016-04-15.md/2016-04-15 10-45-41.md
+#	deleted:    FarBox/.Archive/lylasi/2016-04-15.md/2016-04-15 11-18-49.md
+#	deleted:    FarBox/.Archive/lylasi/2016-04-15.md/2016-04-15 15-15-40.md
+#	deleted:    FarBox/.Archive/lylasi/2016-04-15.txt/2016-04-15 10-42-20.txt
+#	deleted:    FarBox/.farbox
+#	deleted:    FarBox/lylasi/2016-04-15-1.txt
+#	deleted:    FarBox/lylasi/2016-04-15.md
+#	deleted:    FarBox/lylasi/2016-04-15.txt
+#
+
