@@ -1,0 +1,7 @@
+在使用 `C# Winform` 做开发的时候，用 `DataGridview` 排序和使用数据库读取资料的时候，发现两边排序不一样。
+
+发现原因是数据库中文乱码，把所有中文都排到数字和字幕前面导致的。
+
+参考 https://learn.microsoft.com/zh-cn/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver16
+
+使用 Order By `字段名称` COLLATE `Latin1_General_BIN` 解决排序问题。 `BIN`是按二进制字符排序。
