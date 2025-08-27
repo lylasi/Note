@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>澳门居民珠海灵活就业保险参保指南</title>
+    <title>澳门居民参与珠海灵活就业医疗和养老保险指南</title>
     <style>
         /* 现代化样式设计 */
         :root {
@@ -76,6 +76,8 @@
         .toc ul {
             list-style: none;
             padding: 0;
+            columns: 2;
+            gap: 1rem;
         }
 
         .toc li {
@@ -123,6 +125,11 @@
             font-size: 1.2rem;
             margin: 1.2rem 0 0.6rem 0;
         }
+        
+        .content h4 a {
+            color: inherit;
+        }
+
 
         /* 表格样式 */
         table {
@@ -166,7 +173,15 @@
         }
 
         .warning-box {
-            background: #fff5f5;
+            background: #fff9f0;
+            border-left: 4px solid var(--warning-color);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .danger-box {
+             background: #fff5f5;
             border-left: 4px solid var(--accent-color);
             padding: 1.5rem;
             margin: 1rem 0;
@@ -180,6 +195,14 @@
             margin: 1rem 0;
             border-radius: 0 8px 8px 0;
         }
+        
+        .info-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
 
         /* 列表样式 */
         ul, ol {
@@ -189,6 +212,10 @@
 
         li {
             margin: 0.5rem 0;
+        }
+        
+        .content ul li, .content ol li {
+            padding-left: 0.5rem;
         }
 
         /* 链接样式 */
@@ -229,6 +256,7 @@
 
         .case-study h4 {
             color: var(--secondary-color);
+            margin-top: 0;
             margin-bottom: 1rem;
         }
 
@@ -272,19 +300,18 @@
             .container {
                 padding: 0 15px;
             }
-            
+            .toc ul {
+                columns: 1;
+            }
             .header h1 {
                 font-size: 2rem;
             }
-            
             .content {
                 padding: 1.5rem;
             }
-            
             table {
                 font-size: 0.9rem;
             }
-            
             th, td {
                 padding: 0.7rem;
             }
@@ -292,8 +319,8 @@
 
         /* 打印样式 */
         @media print {
-            .toc, .header {
-                break-inside: avoid;
+            .toc, .header, .btn {
+                display: none !important;
             }
             
             .content h2 {
@@ -303,6 +330,10 @@
             
             table {
                 break-inside: avoid;
+            }
+            
+            .footer {
+                page-break-before: always;
             }
         }
 
@@ -328,43 +359,12 @@
         html {
             scroll-behavior: smooth;
         }
-
-        /* 工具提示样式 */
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted var(--secondary-color);
-            cursor: help;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 200px;
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 8px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -100px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.9rem;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>澳门居民珠海灵活就业保险参保指南</h1>
+            <h1>澳门居民参与珠海灵活就业医疗和养老保险指南</h1>
             <p class="subtitle">详细的参保政策解读与实用案例分析 | 2025年最新版</p>
         </div>
     </header>
@@ -375,15 +375,15 @@
             <h2>📋 目录导航</h2>
             <ul>
                 <li><a href="#overview">政策概述</a></li>
+                <li><a href="#glossary">专业名词解释</a></li>
                 <li><a href="#conditions">一、参保条件</a></li>
                 <li><a href="#fees">二、缴费标准</a></li>
                 <li><a href="#process">三、办理流程</a></li>
                 <li><a href="#reminders">四、重要提醒</a></li>
                 <li><a href="#contact">五、联系方式</a></li>
-                <li><a href="#medical">六、医疗保险待遇详细说明</a></li>
-                <li><a href="#pension">七、养老保险待遇详细说明</a></li>
-                <li><a href="#timeline">八、政策时间节点汇总</a></li>
-                <li><a href="#glossary">专业名词解释</a></li>
+                <li><a href="#medical">六、医疗保险待遇</a></li>
+                <li><a href="#pension">七、养老保险待遇</a></li>
+                <li><a href="#timeline">八、政策时间节点</a></li>
             </ul>
         </nav>
 
@@ -405,13 +405,137 @@
                     <li>广东省人力资源和社会保障厅（官网：<a href="https://hrss.gd.gov.cn/" target="_blank">hrss.gd.gov.cn</a>）</li>
                 </ul>
             </div>
+             <div class="info-box">
+                <h4>🔗 详细参考链接</h4>
+                <ul>
+                    <li>珠海港澳台居民参保政策：<a href="https://zhsi.zhuhai.gov.cn/rdwt/content/post_3764440.html" target="_blank">https://zhsi.zhuhai.gov.cn/rdwt/content/post_3764440.html</a></li>
+                    <li>珠海基本医疗保险办法：<a href="https://www.lzflfw.com/web/document/detail/JoNSg2VNZ" target="_blank">https://www.lzflfw.com/web/document/detail/JoNSg2VNZ</a></li>
+                    <li>珠海医保新政策解读：<a href="https://m.mp.oeeee.com/a/BAAFRD000020240829993600.html" target="_blank">https://m.mp.oeeee.com/a/BAAFRD000020240829993600.html</a></li>
+                    <li>珠海企业服务平台政策解读：<a href="https://zhsme.org.cn/policy/toPolicyAnalysisDetail" target="_blank">https://zhsme.org.cn/policy/toPolicyAnalysisDetail</a></li>
+                    <li>广东省延迟退休政策：<a href="https://www.gdpc.gov.cn/gdrdw/zixun/quanguorenda/content/post_231514.html" target="_blank">https://www.gdpc.gov.cn/gdrdw/zixun/quanguorenda/content/post_231514.html</a></li>
+                    <li>珠海灵活就业参保指南：<a href="https://m.zh.bendibao.com/live/68645.shtm" target="_blank">https://m.zh.bendibao.com/live/68645.shtm</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 专业名词解释 -->
+        <section class="content" id="glossary">
+            <h2>📜 专业名词解释</h2>
+            <h3>保险类型相关</h3>
+            <h4><a id="统账结合">统账结合职工医疗保险</a></h4>
+            <p><strong>简单理解</strong>：既有"个人小金库"又有"大家共享池"的医疗保险</p>
+            <ul>
+                <li><strong>个人账户</strong>：每月缴费的一部分进入你个人的医疗账户，可以用来买药、门诊看病</li>
+                <li><strong>统筹基金</strong>：大家缴费汇总的"公共资金池"，主要用于住院等大额医疗费用报销</li>
+                <li><strong>优势</strong>：平时看病买药方便，住院也有保障</li>
+            </ul>
+            <h4><a id="单建统筹">单建统筹职工医疗保险</a></h4>
+            <p><strong>简单理解</strong>：只有"大家共享池"的医疗保险，没有个人账户</p>
+            <ul>
+                <li><strong>统筹基金</strong>：只有公共资金池，主要保障住院等大额医疗费用</li>
+                <li><strong>特点</strong>：缴费较低，但平时买药看门诊需要自己掏钱</li>
+                <li><strong>适合人群</strong>：预算有限，主要想保障大病风险的人群</li>
+            </ul>
+            <h4><a id="灵活就业">灵活就业人员</a></h4>
+            <p><strong>简单理解</strong>：没有固定工作单位，自己给自己交社保的人</p>
+            <ul>
+                <li><strong>包括</strong>：个体户、自由职业者、临时工、网约车司机等</li>
+                <li><strong>特点</strong>：个人承担全部社保费用（企业职工是公司和个人共同承担）</li>
+                <li><strong>优势</strong>：享受和企业职工同等的社保待遇</li>
+            </ul>
+            <h3>医疗保险相关</h3>
+            <h4><a id="起付标准">起付标准（起付线）</a></h4>
+            <p><strong>简单理解</strong>：医保开始报销前，你需要先自己掏的钱</p>
+            <ul>
+                <li><strong>举例</strong>：三级医院起付线1000元，意思是住院费用前1000元完全自费，超过1000元的部分才开始按比例报销</li>
+                <li><strong>作用</strong>：防止小病大治，减少医保基金压力</li>
+            </ul>
+            <h4><a id="报销比例">报销比例</a></h4>
+            <p><strong>简单理解</strong>：超过起付线的费用中，医保帮你支付的比例</p>
+            <ul>
+                <li><strong>举例</strong>：报销比例92%，意思是符合规定的医疗费用，医保支付92%，你个人支付8%</li>
+                <li><strong>影响因素</strong>：医院等级、参保类型、是否退休等</li>
+            </ul>
+            <h4><a id="大病保险">大病保险</a></h4>
+            <p><strong>简单理解</strong>：在基本医保基础上的"加强版"保障，专门保障大额医疗费用</p>
+            <ul>
+                <li><strong>启动条件</strong>：个人自付费用达到一定金额（如1.2万元）后启动</li>
+                <li><strong>作用</strong>：进一步减轻大病患者的经济负担</li>
+                <li><strong>费用来源</strong>：从基本医保基金中划拨，个人不额外缴费</li>
+            </ul>
+            <h4><a id="门诊统筹">门诊统筹</a></h4>
+            <p><strong>简单理解</strong>：平时到社区医院看病也能报销的制度</p>
+            <ul>
+                <li><strong>适用范围</strong>：主要在社区卫生服务中心、镇卫生院等基层医疗机构</li>
+                <li><strong>报销比例</strong>：通常80-85%</li>
+                <li><strong>目的</strong>：鼓励"小病在社区"，缓解大医院压力</li>
+            </ul>
+            <h3>养老保险相关</h3>
+            <h4><a id="基础养老金">基础养老金</a></h4>
+            <p><strong>简单理解</strong>：退休后从"大池子"里分到的钱，缴费时间越长越多</p>
+            <ul>
+                <li><strong>计算原理</strong>：根据缴费年限和缴费水平确定</li>
+                <li><strong>特点</strong>：体现"长缴多得"原则，多缴费1年，基础养老金就多一些</li>
+            </ul>
+            <h4><a id="个人账户养老金">个人账户养老金</a></h4>
+            <p><strong>简单理解</strong>：你个人账户里存的钱，退休后按月领取</p>
+            <ul>
+                <li><strong>资金来源</strong>：个人缴费的一部分（8%中的一部分）+ 利息</li>
+                <li><strong>计算方法</strong>：个人账户总额 ÷ 计发月数</li>
+                <li><strong>特点</strong>：完全属于个人，多缴多得</li>
+            </ul>
+            <h4><a id="缴费基数">缴费基数</a></h4>
+            <p><strong>简单理解</strong>：计算你每月应该交多少社保费的"底数"</p>
+            <ul>
+                <li><strong>举例</strong>：缴费基数5000元，养老保险费率8%，那么每月缴费 5000×8%=400元</li>
+                <li><strong>上下限</strong>：有最低和最高限制，保护低收入者，控制高收入者</li>
+            </ul>
+            <h4><a id="计发月数">计发月数</a></h4>
+            <p><strong>简单理解</strong>：个人账户的钱预计要分几个月发完</p>
+            <ul>
+                <li><strong>设定原理</strong>：根据退休年龄和预期寿命确定</li>
+                <li><strong>举例</strong>：60岁退休计发月数139个月，意思是个人账户的钱预计139个月发完</li>
+                <li><strong>说明</strong>：不是说只能领139个月，而是计算标准，实际可以终身享受</li>
+            </ul>
+            <h4><a id="延迟退休">延迟退休</a></h4>
+            <p><strong>简单理解</strong>：退休年龄逐步往后推迟的政策</p>
+            <ul>
+                <li><strong>实施方式</strong>：渐进式，每4个月延迟1个月</li>
+                <li><strong>时间安排</strong>：2025年开始，用15年时间完成</li>
+                <li><strong>影响</strong>：退休时间推迟，但养老金待遇会相应提高</li>
+            </ul>
+            <h4><a id="回本年限">回本年限</a></h4>
+            <p><strong>简单理解</strong>：缴费的钱通过养老金多久能全部领回来</p>
+            <ul>
+                <li><strong>计算方法</strong>：总缴费金额 ÷ 月养老金 = 回本月数</li>
+                <li><strong>影响因素</strong>：缴费基数、缴费年限、退休年龄、养老金水平</li>
+                <li><strong>重要提醒</strong>：这是基础计算，实际还要考虑通胀、利息等因素</li>
+            </ul>
+            <h3>政策执行相关</h3>
+            <h4><a id="连续参保">连续参保缴费</a></h4>
+            <p><strong>简单理解</strong>：按时交费，不断缴，保持参保状态连续</p>
+            <ul>
+                <li><strong>重要性</strong>：影响报销比例和待遇水平</li>
+                <li><strong>断缴影响</strong>：可能影响医保待遇，需要重新计算连续缴费时间</li>
+            </ul>
+            <h4><a id="转诊">转诊</a></h4>
+            <p><strong>简单理解</strong>：从小医院转到大医院看病的程序</p>
+            <ul>
+                <li><strong>目的</strong>：合理利用医疗资源，控制医疗费用</li>
+                <li><strong>好处</strong>：办理转诊手续后，报销比例通常更高</li>
+            </ul>
+            <h4><a id="异地就医">异地就医</a></h4>
+            <p><strong>简单理解</strong>：在参保地以外的地方看病就医</p>
+            <ul>
+                <li><strong>备案</strong>：需要提前办理相关手续</li>
+                <li><strong>直接结算</strong>：办好手续后可以直接刷卡报销，不用垫付</li>
+            </ul>
         </section>
 
         <!-- 参保条件 -->
         <section class="content" id="conditions">
             <h2>🎯 一、参保条件</h2>
-            <p>澳门居民在珠海参加灵活就业社会保险需满足以下条件：</p>
-            
+            <p>澳门居民在珠海参加<a href="#灵活就业">灵活就业</a>社会保险需满足以下条件：</p>
             <div class="success-box">
                 <ol>
                     <li><strong>就业条件</strong>：在珠海从事无雇工的个体工商经营</li>
@@ -426,8 +550,7 @@
             <div class="warning-box">
                 <strong>⏰ 生效时间：</strong> 2025年2月起
             </div>
-
-            <h3>🏥 方案一：统账结合职工医疗保险（原一档）</h3>
+            <h3>🏥 方案一：<a href="#统账结合">统账结合</a>职工医疗保险（原一档）</h3>
             <table>
                 <thead>
                     <tr>
@@ -438,24 +561,23 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>养老保险</td>
+                        <td><a href="#养老保险">养老保险</a></td>
                         <td>953.4元</td>
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>医疗保险（统账结合）</td>
+                        <td>医疗保险（<a href="#统账结合">统账结合</a>）</td>
                         <td>318.22元</td>
                         <td>个人账户+统筹基金</td>
                     </tr>
-                    <tr class="highlight-row">
+                    <tr>
                         <td><strong>合计</strong></td>
                         <td><strong>1,271.62元</strong></td>
                         <td>-</td>
                     </tr>
                 </tbody>
             </table>
-
-            <h3>🏨 方案二：单建统筹职工医疗保险（原二档）</h3>
+            <h3>🏨 方案二：<a href="#单建统筹">单建统筹</a>职工医疗保险（原二档）</h3>
             <table>
                 <thead>
                     <tr>
@@ -466,16 +588,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>养老保险</td>
+                        <td><a href="#养老保险">养老保险</a></td>
                         <td>953.4元</td>
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>医疗保险（单建统筹）</td>
+                        <td>医疗保险（<a href="#单建统筹">单建统筹</a>）</td>
                         <td>113.65元</td>
                         <td>仅统筹基金，无个人账户</td>
                     </tr>
-                    <tr class="highlight-row">
+                    <tr>
                         <td><strong>合计</strong></td>
                         <td><strong>1,067.05元</strong></td>
                         <td>-</td>
@@ -483,8 +605,433 @@
                 </tbody>
             </table>
         </section>
+        
+        <!-- 办理流程 -->
+        <section class="content" id="process">
+            <h2>📝 三、办理流程</h2>
+            <h3>申请地点</h3>
+            <ul>
+                <li><strong>办理部门</strong>：珠海市税务部门</li>
+                <li><strong>咨询电话</strong>：12366-2</li>
+            </ul>
+            <h3>办理步骤</h3>
+            <ol>
+                <li>准备相关证件材料</li>
+                <li>前往珠海市税务部门</li>
+                <li>申报参保手续</li>
+                <li>选择缴费方案</li>
+                <li>完成参保登记</li>
+            </ol>
+        </section>
 
-        <!-- 更多内容将在后续添加... -->
+        <!-- 重要提醒 -->
+        <section class="content" id="reminders">
+            <h2>⚠️ 四、重要提醒</h2>
+            <div class="danger-box">
+                <h3>特别注意事项</h3>
+                <ul>
+                    <li>曾在广东省内使用港澳台通行证参加社会保险的申请人，在办理参保时<strong>必须主动告知工作人员</strong></li>
+                    <li>这一信息对于参保记录的连续性和待遇享受非常重要</li>
+                </ul>
+            </div>
+            <div class="success-box">
+                <h3>政策优势</h3>
+                <ul>
+                    <li>澳门居民可享受与珠海本地居民同等的社会保险待遇</li>
+                    <li>有助于澳门居民在珠海的长期发展和生活保障</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section class="content" id="contact">
+            <h2>📞 五、联系方式</h2>
+            <ul>
+                <li><strong>咨询热线：</strong> 12366-2（珠海市税务部门）</li>
+                <li><strong>政策查询网站：</strong> <a href="https://zhrsj.zhuhai.gov.cn/" target="_blank">珠海市人力资源和社会保障局官网</a></li>
+            </ul>
+        </section>
+
+        <!-- 医疗保险待遇 -->
+        <section class="content" id="medical">
+            <h2>🩺 六、医疗保险待遇详细说明</h2>
+            <div class="highlight-box">
+                <p><strong>政策依据：</strong> 《珠海市人民政府关于印发珠海市基本医疗保险办法的通知》（珠府〔2024〕57号）</p>
+                <p><strong>生效时间：</strong> 2024年9月1日起，有效期5年</p>
+            </div>
+            <h3>6.1 住院医疗待遇</h3>
+            <h4>住院<a href="#报销比例">报销比例</a>（2024年7月起大幅提升）</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>医院等级</th>
+                        <th>在职职工报销比例</th>
+                        <th>退休人员报销比例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>一级医院</td>
+                        <td>94%</td>
+                        <td>95%</td>
+                    </tr>
+                    <tr>
+                        <td>二级医院</td>
+                        <td>93%</td>
+                        <td>95%</td>
+                    </tr>
+                    <tr>
+                        <td>三级医院</td>
+                        <td>92%</td>
+                        <td>95%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>住院<a href="#起付标准">起付标准</a></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>医院等级</th>
+                        <th>起付标准</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>一级医院</td>
+                        <td>300元</td>
+                    </tr>
+                    <tr>
+                        <td>二级医院</td>
+                        <td>500元</td>
+                    </tr>
+                    <tr>
+                        <td>三级医院</td>
+                        <td>1000元</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>住院年度最高支付限额</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>连续参保缴费时间</th>
+                        <th>最高支付限额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6个月及以内</td>
+                        <td>2万元</td>
+                    </tr>
+                    <tr>
+                        <td>6个月以上、1年及以内</td>
+                        <td>8万元</td>
+                    </tr>
+                    <tr>
+                        <td>1年以上或集中参保</td>
+                        <td>40万元</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>6.2 门诊医疗待遇</h3>
+            <h4><a href="#门诊统筹">门诊统筹</a>待遇</h4>
+             <ul>
+                <li><strong>适用范围</strong>：<a href="#门诊统筹">门诊统筹</a>定点机构（社区卫生服务机构及镇卫生院）</li>
+                <li><strong>在职人员<a href="#报销比例">报销比例</a></strong>：80%</li>
+                <li><strong>退休人员<a href="#报销比例">报销比例</a></strong>：85%（签订家庭医生服务协议可提高5%）</li>
+                <li><strong>年度最高支付限额</strong>：3,500元（含个人自付部分）</li>
+                <li><strong>特殊规定</strong>：在选定的门诊统筹定点机构就医不设封顶线</li>
+            </ul>
+            <h3>6.3 <a href="#大病保险">大病保险</a>待遇</h3>
+            <p><strong>年度最高支付限额</strong>：职工基本医保叠加<a href="#大病保险">大病保险</a>的年度最高支付限额提高至<strong>150万元</strong></p>
+            <h4><a href="#大病保险">大病保险</a>分段报销</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>费用段</th>
+                        <th>适用条件</th>
+                        <th>报销比例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>第一段</td>
+                        <td>合规医疗费用累计自付1.2万元以上、20万元（含）以内</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>第二段</td>
+                        <td>基本医保连续参保缴费3年以上的职工，合规医疗费用累计自付20万元以上、110万元（含）以内</td>
+                        <td>85%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>6.4 医疗保险待遇举例说明</h3>
+            <div class="case-study">
+                <h4>举例1：住院治疗费用报销</h4>
+                <p><strong>案例</strong>：澳门居民李先生参加<a href="#统账结合">统账结合</a>职工医保1年以上，因病在珠海三级医院住院治疗，总费用10万元。</p>
+                <p><strong>计算过程</strong>：</p>
+                <ul>
+                    <li><a href="#起付标准">起付标准</a>：1,000元（个人承担）</li>
+                    <li>可报销费用：100,000 - 1,000 = 99,000元</li>
+                    <li>基本医保报销：99,000 × 92% = 91,080元</li>
+                    <li>个人自付：100,000 - 91,080 = 8,920元</li>
+                    <li><strong>实际报销率</strong>：91.08%</li>
+                </ul>
+            </div>
+            <div class="case-study">
+                <h4>举例2：门诊统筹待遇</h4>
+                <p><strong>案例</strong>：澳门居民陈女士在社区卫生服务中心门诊就医，年度费用4,000元。</p>
+                <p><strong>计算过程</strong>：</p>
+                <ul>
+                    <li>基本<a href="#门诊统筹">门诊统筹</a>报销：3,500 × 80% = 2,800元</li>
+                    <li>超出部分：4,000 - 3,500 = 500元（个人承担）</li>
+                    <li>个人承担总额：(3,500 - 2,800) + 500 = 1,200元</li>
+                    <li><strong>实际报销</strong>：2,800元</li>
+                </ul>
+            </div>
+            <div class="case-study">
+                <h4>举例3：大病保险待遇</h4>
+                <p><strong>案例</strong>：澳门居民王先生<a href="#连续参保">连续参保</a>5年，患重病年度医疗费用50万元。</p>
+                <p><strong>计算过程</strong>：</p>
+                <ul>
+                    <li>基本医保报销：按住院标准约42-46万元</li>
+                    <li>个人自付：约4-8万元</li>
+                    <li><a href="#大病保险">大病保险</a>报销：(50,000 - 12,000) × 80% = 30,400元</li>
+                    <li><strong>总报销</strong>：基本医保 + <a href="#大病保险">大病保险</a>约47-49万元</li>
+                    <li><strong>个人实际承担</strong>：约1-3万元</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 养老保险待遇 -->
+        <section class="content" id="pension">
+            <h2>👴 七、养老保险待遇详细说明</h2>
+            <div class="highlight-box">
+                <p><strong>政策依据：</strong> 国家企业职工基本养老保险制度</p>
+                <p><strong>最新调整：</strong> 2025年1月1日起实施<a href="#延迟退休">延迟退休</a>政策</p>
+            </div>
+            <h3>7.1 退休条件和年龄</h3>
+            <h4>2025年<a href="#延迟退休">延迟退休</a>政策（重要更新）</h4>
+            <div class="warning-box">
+                <strong>实施时间</strong>：2025年1月1日起，用15年时间逐步实施
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>性别及岗位</th>
+                        <th>原退休年龄</th>
+                        <th>目标退休年龄</th>
+                        <th>延迟方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>男职工</td>
+                        <td>60周岁</td>
+                        <td>63周岁</td>
+                        <td>每4个月延迟1个月</td>
+                    </tr>
+                    <tr>
+                        <td>女职工（管理岗）</td>
+                        <td>55周岁</td>
+                        <td>58周岁</td>
+                        <td>每4个月延迟1个月</td>
+                    </tr>
+                    <tr>
+                        <td>女职工（工人）</td>
+                        <td>50周岁</td>
+                        <td>55周岁</td>
+                        <td>每4个月延迟1个月</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>基本退休条件</h4>
+            <ol>
+                <li><strong>年龄要求</strong>：达到上述<a href="#延迟退休">延迟退休</a>年龄</li>
+                <li><strong><a href="#缴费年限">缴费年限</a></strong>：累计缴费满15年（最低要求）</li>
+                <li><strong>缴费建议</strong>：多缴多得、长缴多得</li>
+            </ol>
+            <h3>7.2 养老金计算公式</h3>
+            <h4>基本养老金构成</h4>
+            <p><strong><a href="#基本养老金">基本养老金</a> = <a href="#基础养老金">基础养老金</a> + <a href="#个人账户养老金">个人账户养老金</a> + 过渡性养老金</strong></p>
+            <h4>详细计算方法</h4>
+            <p><strong>1. <a href="#基础养老金">基础养老金</a></strong></p>
+            <pre><code><a href="#基础养老金">基础养老金</a> = （全省上年度在岗职工月平均工资 × a + 本人指数化月平均缴费工资）÷ 2 × <a href="#缴费年限">缴费年限</a> × 1%</code></pre>
+            <p><strong>2. <a href="#个人账户养老金">个人账户养老金</a></strong></p>
+            <pre><code><a href="#个人账户养老金">个人账户养老金</a> = 个人账户储存额 ÷ <a href="#计发月数">计发月数</a></code></pre>
+            <p><strong>3. 关键参数</strong></p>
+            <ul>
+                <li><strong>2025年<a href="#缴费基数">缴费基数</a></strong>：下限4,767元/月，上限27,501元/月</li>
+                <li><strong>个人账户记账利率</strong>：2024年约为2.62%</li>
+                <li><strong><a href="#计发月数">计发月数</a></strong>：60岁退休为139个月，65岁为101个月</li>
+            </ul>
+            <h3>7.3 养老金待遇举例说明</h3>
+            <div class="case-study">
+                <h4>举例1：按最低标准缴费15年</h4>
+                <p><strong>假设条件</strong>：澳门居民张先生，2025年开始参保，按最低<a href="#缴费基数">缴费基数</a>4,767元缴费15年，个人月缴费381.36元，60岁退休。</p>
+                <ul>
+                    <li><strong>个人账户累计</strong>：考虑利息收益后约50,000元</li>
+                    <li><strong><a href="#基础养老金">基础养老金</a>估算</strong>：约898元</li>
+                    <li><strong><a href="#个人账户养老金">个人账户养老金</a></strong>：50,000 ÷ 139 = 360元</li>
+                    <li><strong>月养老金总额</strong>：898 + 360 = <strong>1,258元</strong></li>
+                </ul>
+            </div>
+            <div class="case-study">
+                <h4>举例2：按较高标准缴费25年</h4>
+                <p><strong>假设条件</strong>：澳门居民李女士，按8,000元基数缴费25年，个人月缴费640元，58岁退休。</p>
+                <ul>
+                    <li><strong>个人账户累计</strong>：考虑利息约150,000元</li>
+                    <li><strong><a href="#基础养老金">基础养老金</a>估算</strong>：2,500元</li>
+                    <li><strong><a href="#个人账户养老金">个人账户养老金</a></strong>：150,000 ÷ 109 = 1,376元</li>
+                    <li><strong>月养老金总额</strong>：2,500 + 1,376 = <strong>3,876元</strong></li>
+                </ul>
+            </div>
+            <div class="case-study">
+                <h4>举例3：缴费年限对比分析</h4>
+                <p>同等<a href="#缴费基数">缴费基数</a>（6,000元），不同<a href="#缴费年限">缴费年限</a>对比：</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><a href="#缴费年限">缴费年限</a></th>
+                            <th><a href="#基础养老金">基础养老金</a></th>
+                            <th><a href="#个人账户养老金">个人账户养老金</a></th>
+                            <th>月养老金总额</th>
+                            <th>与15年差额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15年</td><td>1,350元</td><td>432元</td><td>1,782元</td><td>-</td>
+                        </tr>
+                        <tr>
+                            <td>20年</td><td>1,800元</td><td>576元</td><td>2,376元</td><td>+594元</td>
+                        </tr>
+                        <tr>
+                            <td>25年</td><td>2,250元</td><td>720元</td><td>2,970元</td><td>+1,188元</td>
+                        </tr>
+                        <tr>
+                            <td>30年</td><td>2,700元</td><td>864元</td><td>3,564元</td><td>+1,782元</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>结论</strong>：<a href="#缴费年限">缴费年限</a>每增加5年，月养老金约增加600元左右。</p>
+            </div>
+            <h3>7.4 养老保险<a href="#回本年限">回本年限</a>分析</h3>
+            <p><strong>简单理解</strong>：缴费的钱通过养老金多久能全部领回来。</p>
+            <div class="case-study">
+                <h4>举例1：最低标准缴费15年回本分析</h4>
+                <p><strong>缴费情况</strong>：15年总缴费68,645元，月养老金1,258元。</p>
+                <ul>
+                    <li><strong>回本月数</strong>：68,645 ÷ 1,258 = <strong>54.5个月</strong> (约4.5年)</li>
+                    <li><strong>分析</strong>：从60岁开始领取，到64.5岁可回本，之后都是"纯收益"。</li>
+                </ul>
+            </div>
+             <div class="case-study">
+                <h4>举例2：较高标准缴费25年回本分析</h4>
+                <p><strong>缴费情况</strong>：25年总缴费192,000元，月养老金3,876元。</p>
+                <ul>
+                    <li><strong>回本月数</strong>：192,000 ÷ 3,876 = <strong>49.5个月</strong> (约4.1年)</li>
+                    <li><strong>分析</strong>：回本速度更快，投资收益率更高。</li>
+                </ul>
+            </div>
+            <div class="case-study">
+                <h4>举例3：不同缴费年限回本对比</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><a href="#缴费年限">缴费年限</a></th>
+                            <th>总缴费金额</th>
+                            <th>月养老金</th>
+                            <th>回本月数</th>
+                            <th><a href="#回本年限">回本年限</a></th>
+                            <th>20年总收益</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15年</td><td>68,645元</td><td>1,258元</td><td>54.5个月</td><td><strong>4.5年</strong></td><td>233,275元</td>
+                        </tr>
+                        <tr>
+                            <td>20年</td><td>91,526元</td><td>2,376元</td><td>38.5个月</td><td><strong>3.2年</strong></td><td>478,674元</td>
+                        </tr>
+                        <tr>
+                            <td>25年</td><td>114,408元</td><td>2,970元</td><td>38.5个月</td><td><strong>3.2年</strong></td><td>598,592元</td>
+                        </tr>
+                        <tr>
+                            <td>30年</td><td>137,289元</td><td>3,564元</td><td>38.5个月</td><td><strong>3.2年</strong></td><td>718,509元</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <p><small>*注：基于6,000元缴费基数计算，20年总收益指退休后领取20年的总金额</small></p>
+            </div>
+             <div class="case-study">
+                <h4>举例4：医疗保险回本分析</h4>
+                <ul>
+                    <li><strong><a href="#统账结合">统账结合</a>医疗保险</strong>：年缴费约3,819元。年度门诊可报销限额3,500元。当年基本回本，住院大病报销是额外保障。</li>
+                    <li><strong><a href="#单建统筹">单建统筹</a>医疗保险</strong>：年缴费约1,364元。主要保障住院费用，一次中等住院即可回本。更适合年轻健康、很少看病的人群。</li>
+                </ul>
+            </div>
+            <h4><a href="#回本年限">回本年限</a>优化策略</h4>
+            <ol>
+                <li><strong>提前退休影响</strong>：延迟1年退休，回本时间缩短约0.3年。</li>
+                <li><strong><a href="#缴费基数">缴费基数</a>选择</strong>：较高基数回本相对更快，长期收益差距显著。</li>
+                <li><strong>健康寿命考量</strong>：中国人均预期寿命约78岁，大部分参保人能获得10-20年的收益期。</li>
+            </ol>
+            <div class="info-box">
+                <h4>重要提醒</h4>
+                <p>这些计算基于政策和待遇水平不变等假设，未计入通胀、遗属待遇等其他权益。实际优势在于国家担保、待遇与经济发展同步调整，是稳健的长期保障。</p>
+            </div>
+            <h3>7.5 养老待遇优化建议</h3>
+            <ol>
+                <li><strong>延长<a href="#缴费年限">缴费年限</a></strong>：超过15年继续缴费，显著提升退休待遇</li>
+                <li><strong>提高缴费标准</strong>：在经济能力范围内选择较高<a href="#缴费基数">缴费基数</a></li>
+                <li><strong><a href="#连续参保">连续缴费</a></strong>：避免中断，保持参保连续性</li>
+                <li><strong>关注政策调整</strong>：及时了解退休年龄和待遇标准变化</li>
+            </ol>
+        </section>
+
+        <!-- 政策时间节点汇总 -->
+        <section class="content" id="timeline">
+            <h2>🗓️ 八、政策时间节点汇总</h2>
+            <h3>重要政策生效时间</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>政策内容</th>
+                        <th>生效时间</th>
+                        <th>政策文件</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>珠海基本医疗保险新办法</td>
+                        <td>2024年9月1日</td>
+                        <td>珠府〔2024〕57号</td>
+                    </tr>
+                    <tr>
+                        <td>医保住院报销比例提升</td>
+                        <td>2024年7月1日</td>
+                        <td>珠海市医保局</td>
+                    </tr>
+                    <tr>
+                        <td>灵活就业缴费标准调整</td>
+                        <td>2025年2月起</td>
+                        <td>珠海市税务局</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#延迟退休">延迟退休</a>政策实施</td>
+                        <td>2025年1月1日</td>
+                        <td>全国人大常委会决定</td>
+                    </tr>
+                    <tr>
+                        <td>城乡居民养老金提标</td>
+                        <td>2024年7月1日</td>
+                        <td>523元/月</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         
     </div>
 
@@ -506,11 +1053,13 @@
             links.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
                     if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 20; // 20px offset
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
                         });
                     }
                 });
@@ -535,6 +1084,7 @@
             topBtn.style.bottom = '70px';
             topBtn.style.right = '20px';
             topBtn.style.zIndex = '1000';
+            topBtn.style.display = 'none';
             topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
             document.body.appendChild(topBtn);
 
